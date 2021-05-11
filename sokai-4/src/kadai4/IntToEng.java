@@ -11,7 +11,8 @@ public class IntToEng {
 
     // 数値を英訳する変換するメソッド
     static String translateEng(int n) {
-    	if(n >= 0 && n < 11) {return zeroKaraten(n);}
+    	if(n >= 0 && n < 11) return zeroKaraten(n);
+    	if(n>=11 && n<20) return teen(n);
     	else return "";
     }
    
@@ -29,4 +30,18 @@ public class IntToEng {
     	else if(x == 10) return "ten";
     	else return "";
     }
+    
+    static String teen(int x) {
+    	if(x == 11) return "eleven";
+    	else if(x == 12) return "twelve";
+    	else if(x == 13) return "thirteen";
+    	else if(x == 14) return "fourteen";
+    	else if(x == 15) return "fifteen";
+    	else if(x == 16) return "sixteen";
+    	else if(x == 17) return "seventeen";
+    	else if(x == 18) return "eighteen";
+    	else if(x == 19) return "nineteen";
+    	else return "";
+    }
+    
 }
