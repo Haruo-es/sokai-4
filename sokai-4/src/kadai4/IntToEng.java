@@ -13,6 +13,7 @@ public class IntToEng {
     static String translateEng(int n) {
     	if(n >= 0 && n < 11) return zeroKaraten(n);
     	if(n>=11 && n<20) return teen(n);
+    	if(n>=20 && n<100) return futaketa(n);
     	else return "";
     }
    
@@ -44,4 +45,41 @@ public class IntToEng {
     	else return "";
     }
     
+    static String futaketa(int x) {
+    	String[] num2= {"twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
+    	
+    	if(x>=20&&x<30) {
+    		if(x==20) return num2[0];
+    		return num2[0]+"-"+zeroKaraten(x-20);
+    	}
+    	else if(x>=30&&x<40) {
+    		if(x==30) return num2[1];
+    		return num2[1]+"-"+zeroKaraten(x-30);
+    	}
+    	else if(x>=40&&x<50) {
+    		if(x==20) return num2[0];
+    		return num2[2]+"-"+zeroKaraten(x-40);
+    	}
+    	else if(x>=50&&x<60) {
+    		if(x==20) return num2[0];
+    		return num2[3]+"-"+zeroKaraten(x-50);
+    	}
+    	else if(x>=60&&x<70) {
+    		if(x==20) return num2[0];
+    		return num2[4]+"-"+zeroKaraten(x-60);
+    	}
+    	else if(x>=70&&x<80) {
+    		if(x==20) return num2[0];
+    		return num2[5]+"-"+zeroKaraten(x-70);
+    	}
+    	else if(x>=80&&x<90) {
+    		if(x==20) return num2[0];
+    		return num2[6]+"-"+zeroKaraten(x-80);
+    	}
+    	else if(x>=90&&x<100) {
+    		if(x==20) return num2[0];
+    		return num2[7]+"-"+zeroKaraten(x-90);
+    	}
+    	return "";
+    }
 }
